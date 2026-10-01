@@ -1,4 +1,4 @@
-# Auth & Exercise API v1
+# Auth & Exercise API
 
 ## 작업 개요
 
