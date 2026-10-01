@@ -1,4 +1,4 @@
-# Workout Log API v1
+# Workout Log API
 
 ## 작업 개요
 
