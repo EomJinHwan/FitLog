@@ -27,15 +27,3 @@ JWT 인증 정보를 기반으로 로그인 사용자를 확인하고,
 | DELETE | `/api/workouts/{workoutLogNo}` | 내 운동 기록 삭제 |
 | GET | `/api/workouts/date?workoutDate=YYYY-MM-DD` | 날짜별 운동 기록 조회 |
 | GET | `/api/workouts/month?year=YYYY&month=MM` | 월별 운동 기록 조회 |
-
-## 주요 구현 내용
-
-### 운동 기록 소유자 검증
-
-운동 기록은 사용자별 개인 데이터이기 때문에
-상세 조회 및 삭제 전에 로그인 사용자와 운동 기록의 소유자가 같은지 확인하도록 구현했습니다.
-
-```java
-if (!user.getUserNo().equals(workoutLog.getUser().getUserNo())) {
-    throw new IllegalArgumentException("해당 운동 기록에 접근할 수 없습니다");
-}
